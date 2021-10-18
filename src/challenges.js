@@ -16,17 +16,20 @@ function calcArea(base , height) {
 function splitSentence(string) {
   return string.split(" ");
 }
-console.log(splitSentence('foguete'));
+
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName() {  
 }
+
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins , ties) {
+  let vitoria = wins * 3;
+  let empate = ties * 1;
+  let pontos = vitoria + empate;
+  return pontos;
 }
-
+console.log(footballPoints(0, 0));
 // Desafio 6
 function highestCount() {
   // seu código aqui
