@@ -18,10 +18,12 @@ function splitSentence(string) {
 }
 
 // Desafio 4
-function concatName() {  
-
+function concatName(array) {  
+  let i1 = array[0];
+  let i2 = array[array.length - 1];
+  return `${i2}, ${i1}`
 }
-
+console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 
 // Desafio 5
 function footballPoints(wins , ties) {
@@ -43,11 +45,12 @@ function catAndMouse(mouse, cat1, cat2) {
   let gato2 = cat2;
   let distanceRG1 = Math.abs(cat1 - mouse);
   let distanceRG2 = Math.abs(cat2 - mouse);
+
   if (distanceRG1 > distanceRG2 ){
     return 'cat2'
   } else if (distanceRG1 < distanceRG2){
     return 'cat1'
-  } else if (distanceRG1 == distanceRG2) {
+  } else if (distanceRG1 == distanceRG2){
     return 'os gatos trombam e o rato foge'
   }
 }
@@ -68,15 +71,10 @@ function fizzBuzz(numbers) {
   }
   return array; 
 }
-console.log(fizzBuzz([2, 15, 7, 9, 45]));
-
-
-
-
 
 // Desafio 9
 function encode() {
-  // seu código aqui
+  
 }
 function decode() {
   // seu código aqui
