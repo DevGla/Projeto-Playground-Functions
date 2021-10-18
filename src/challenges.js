@@ -1,7 +1,8 @@
 // Desafio 1
 function compareTrue() {
-  // seu código aqui
+  console.log('lucas!');
 }
+compareTrue();
 
 // Desafio 2
 function calcArea() {
