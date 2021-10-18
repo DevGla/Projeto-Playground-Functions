@@ -23,7 +23,7 @@ function concatName(array) {
   let i2 = array[array.length - 1];
   return `${i2}, ${i1}`
 }
-console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
+
 
 // Desafio 5
 function footballPoints(wins , ties) {
@@ -34,9 +34,23 @@ function footballPoints(wins , ties) {
 }
 
 // Desafio 6
-function highestCount(arrayNumbers) {
+function highestCount(array) {
+  let maior = 0;
+  let repeat = 0;
+  for (let i = 0; i < array.length ; i++) {
+   if ( array[i] > maior ) {
+      maior = array[i];
+    }
+  }
+  for (let index = 0 ; index < array.length ; index =+ 1){
+    if (array[index] === maior){
+      repeat += 1;
+    }  
+  }
+  return repeat;
+} 
 
-}
+console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
@@ -45,6 +59,9 @@ function catAndMouse(mouse, cat1, cat2) {
   let gato2 = cat2;
   let distanceRG1 = Math.abs(cat1 - mouse);
   let distanceRG2 = Math.abs(cat2 - mouse);
+
+  /*https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/abs
+  REFERÊNCIA UTILIZADA NO REQUISITO 7, PARA SEMPRE DEIXAR UM NUMERO POSITIVO CASO SEJA NEGATIVO*/
 
   if (distanceRG1 > distanceRG2 ){
     return 'cat2'
@@ -73,7 +90,7 @@ function fizzBuzz(numbers) {
 }
 
 // Desafio 9
-function encode() {
+function encode(string) {
   
 }
 function decode() {
