@@ -19,6 +19,7 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName() {  
+
 }
 
 
@@ -29,21 +30,38 @@ function footballPoints(wins , ties) {
   let pontos = vitoria + empate;
   return pontos;
 }
-console.log(footballPoints(0, 0));
+
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(arrayNumbers) {
+
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let rato = mouse;
+  let gato1 = cat1;
+  let gato2 = cat2;
+  let distanceRG1 = Math.abs(cat1 - mouse);
+  let distanceRG2 = Math.abs(cat2 - mouse);
+  if (distanceRG1 > distanceRG2 ){
+    return 'cat2'
+  } else if (distanceRG1 < distanceRG2){
+    return 'cat1'
+  } else if (distanceRG1 == distanceRG2) {
+    return 'os gatos trombam e o rato foge'
+  }
 }
+console.log(catAndMouse(0 , 3, 2));
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(arrayNumbers) {  
+
 }
+
+
+
+
+
 
 // Desafio 9
 function encode() {
