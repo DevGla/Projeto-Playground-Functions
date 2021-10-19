@@ -34,23 +34,23 @@ function footballPoints(wins , ties) {
 }
 
 // Desafio 6
-function highestCount(array) {
+function highestCount(numMaior) {
   let maior = 0;
   let repeat = 0;
-  for (let i = 0; i < array.length ; i++) {
-   if ( array[i] > maior ) {
-      maior = array[i];
+  
+  for (let i = 0 ; i < numMaior.length ; i += 1){
+    if (numMaior[i] > maior){
+      maior = numMaior[i];
     }
   }
-  for (let index = 0 ; index < array.length ; index =+ 1){
-    if (array[index] === maior){
+  for (let index = 0 ; index < numMaior.length ; index += 1){
+    if (numMaior[index] === maior){
       repeat += 1;
-    }  
+    }
   }
   return repeat;
 } 
-
-console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
+console.log(highestCount([-2,-2,-1]));
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
@@ -59,9 +59,6 @@ function catAndMouse(mouse, cat1, cat2) {
   let gato2 = cat2;
   let distanceRG1 = Math.abs(cat1 - mouse);
   let distanceRG2 = Math.abs(cat2 - mouse);
-
-  /*https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/abs
-  REFERÊNCIA UTILIZADA NO REQUISITO 7, PARA SEMPRE DEIXAR UM NUMERO POSITIVO CASO SEJA NEGATIVO*/
 
   if (distanceRG1 > distanceRG2 ){
     return 'cat2'
@@ -91,10 +88,21 @@ function fizzBuzz(numbers) {
 
 // Desafio 9
 function encode(string) {
-  
+  string = string.replace(/a/g, "1");
+  string = string.replace(/e/g, "2");
+  string = string.replace(/i/g, "3");
+  string = string.replace(/o/g, "4");
+  string = string.replace(/u/g, "5");
+  return string;
 }
-function decode() {
-  // seu código aqui
+
+function decode(string2) {
+  string2 = string2.replace(/1/g, "a");
+  string2 = string2.replace(/2/g, "e");
+  string2 = string2.replace(/3/g, "i");
+  string2 = string2.replace(/4/g, "o");
+  string2 = string2.replace(/5/g, "u");
+  return string2;
 }
 
 module.exports = {
